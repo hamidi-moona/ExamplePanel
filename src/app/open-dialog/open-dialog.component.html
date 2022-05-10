@@ -1,0 +1,21 @@
+<form [formGroup]="formDialog" (ngSubmit)="createTaskUser()">
+    <input class="form-control" id="UID" formControlName="UID" hidden>
+    <div class="mb-3">
+        <label for="name" class="form-label">نام : </label>
+        <select class="form-select" type="text" id="name" formControlName="name" (change)="selectChangeHandler_name($event)">
+            <option *ngFor="let user of AllUser" value="{{user.name}}"> {{user.name}}</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="lastname" class="form-label">نام خانوادگی :</label>
+        <select class="form-select" type="text"  id="lastname" formControlName="lastName" (change)="selectChangeHandler_lastname($event)">
+            <option *ngFor="let user of AllUser" value="{{user.lastName}}" class="opt">{{user.lastName}}</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="taskUser" class="form-label">شرح وظایف :</label>
+        <textarea class="form-control" id="taskUser" rows="3" formControlName="task"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">{{actionBtn}}</button>
+</form>

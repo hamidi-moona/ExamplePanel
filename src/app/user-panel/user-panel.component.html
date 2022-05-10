@@ -1,0 +1,32 @@
+<div class="admin-panel">
+    <nav class="navbar navbar-light bg-primary">
+        <div class="container-fluid">
+            <button class="btn btn-danger btn-logout" (click)="UserlogOut()">LogOut</button>
+
+            <div class="title">
+                <a class="navbar-brand">{{userName}} </a> &nbsp;&nbsp;
+                <mat-icon class="menu" >supervised_user_circle</mat-icon>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">کد کاربری</th>
+                <th scope="col">شرح وظایفه</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let task of userTask; let i= index">
+                <th scope="row">{{i + 1}}</th>
+                <td scope="row">{{task.UID}}</td>
+                <td scope="row">{{task.task}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

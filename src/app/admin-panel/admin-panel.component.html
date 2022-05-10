@@ -1,0 +1,55 @@
+<div class="admin-panel">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="btn btn-outline-danger btn-logout" (click)="logOut()">LogOut</button>
+
+            <div class="title">
+                <a class="navbar-brand">Sample Panel Project </a> &nbsp;&nbsp;
+                <mat-icon class="menu" (click)="openNavbar()">menu</mat-icon>
+            </div>
+        </div>
+    </nav>
+
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" [opened]="toggleNav" class="side-drawer">
+            <div class="contect-drawer">
+                <img src="../../assets/img/user-icon.jpg" class="img-user">
+                <div class="user-info">
+                    {{userLogeed}}
+                </div>
+            </div>
+        </mat-drawer>
+        <mat-drawer-content class="drawer-content">
+            <button class="btn btn-success btn-add-task" (click)="AddTaskDialog()">
+                اضافه کردن وظیفه کارمندان
+            </button>
+
+
+            <table class="table">
+                <thead>
+                    <th scope="col">UID</th>
+                    <th scope="col">نام </th>
+                    <th scope="col">نام خانوادگی</th>
+                    <th scope="col">وظیفه</th>
+                    <th scope="col">عملیات</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let task of userTask">
+                        <td scope="row">{{task.UID}}</td>
+                        <td>{{task.name}}</td>
+                        <td>{{task.lastName}}</td>
+                        <td>{{task.task}}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" (click)="editTask(task)">
+                                <mat-icon>edit</mat-icon>
+                            </button>&nbsp;
+                            <button class="btn btn-sm btn-danger" (click)="deleteTask(task.id)">
+                                <mat-icon>delete_forever</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

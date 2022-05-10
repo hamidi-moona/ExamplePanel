@@ -1,0 +1,34 @@
+<div class=" main">
+    <div class="card form-container">
+        <form [formGroup]="loginForm" (ngSubmit)="proceedLogin()">
+            <p>
+                <mat-form-field appearance="legacy">
+                    <mat-label>نام خود را وارد کنید</mat-label>
+                    <input matInput  formControlName="username">
+                    <mat-icon matSuffix>email</mat-icon>
+                    <mat-hint *ngIf="f['username'].touched && f['username'].invalid">
+                        <ng-container *ngIf="f['username'].errors && f['username'].errors['required']">
+                            نام خود را وارد کنید.
+                        </ng-container>
+                    </mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="legacy">
+                    <mat-label>پسورد خود را وارد کنید</mat-label>
+                    <input matInput  formControlName="password">
+                    <mat-icon matSuffix> vpn_key</mat-icon>
+                    <mat-hint *ngIf="f['password'].touched && f['password'].invalid">
+                        <ng-container *ngIf="f['password'].errors && f['password'].errors['required']">
+                            پسورد خود را وارد کنید
+                        </ng-container>
+                    </mat-hint>
+                </mat-form-field>
+            </p>
+
+            <button class="btn btn-primary btn-login">ورود</button>
+        </form>
+
+        <a routerLink="/register" class="register-link">ثبت نام کنید !!</a>
+    </div>
+</div>

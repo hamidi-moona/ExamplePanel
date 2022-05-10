@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+*{
+    direction: rtl;
+    text-align:right ;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(214, 184, 65, 0.2);
+    margin: 0px !important;
+    padding: 0px !important;
+
+    .form-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 500px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+}
