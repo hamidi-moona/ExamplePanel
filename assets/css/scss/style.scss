@@ -1,0 +1,476 @@
+@import "config.scss";
+
+body
+{
+  margin: 0px;
+  direction: rtl;
+  text-align: right;
+  font: $myFontSize $myFontFamily;
+}
+
+img
+{
+  object-fit: cover;
+}
+
+.logo
+{
+  width: 60px;
+}
+
+.site-header
+{
+  .menu
+  {
+    background-color: rgba(#000000,0.2);
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+
+    @include media-breakpoint-down(md)
+    {
+      background-color: $main-color;
+      position: inherit;
+    }
+
+    @media screen and (max-width: 480px)
+    {
+      .navbar-brand
+      {
+        img
+        {
+          width: 50px;
+        }
+
+        span
+        {
+          font-size: 13px;
+        }
+      }
+
+    }
+
+    a
+    {
+      color: white;
+
+      &:hover
+      {
+        color: white;
+      }
+    }
+
+    ul
+    {
+      li
+      {
+        padding-right: 2rem;
+      }
+    }
+  }
+
+  .navbar-nav
+  {
+    padding-right: 0;
+
+    .nav-item
+    {
+      padding: 5px 14px;
+      position: relative;
+
+      @include media-breakpoint-down(md)
+      {
+        width: 40%;
+        margin: auto;
+      }
+
+      &:before
+      {
+        content:'';
+        display: block;
+        width: 0px;
+        height: 2px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        background-color: $secondary-color;
+        transition: width 0.3s;
+      }
+
+      &:hover
+      {
+        &:before
+        {
+          width: 90%;
+        }
+      }
+
+      .nav-link
+      {
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        padding: 5px;
+      }
+
+      &.active
+      {
+        .nav-link
+        {
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+
+
+.site-content
+{
+  position: relative;
+  z-index: 8888;
+
+  .hero
+  {
+    background: $main-color url("../img/background/Group 19.png") no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+
+    &:after
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top:0px;
+      left: 0px;
+      background-color: $main-color;
+      opacity: 0.7;
+      z-index: 999;
+    }
+
+    .scope-ir
+    {
+      z-index: 99999;
+
+      .text
+      {
+        color: $secondary-color;
+      }
+
+      .title
+      {
+        font-size: 28px;
+        padding: 2rem 0px;
+      }
+
+      .description
+      {
+        line-height: 25px;
+        padding-bottom: 2rem;
+      }
+
+      .more-btn
+      {
+        .btn-more
+        {
+          background-color:#40C5FB ;
+          border-radius: 31px;
+          color: white;
+          padding: 10px 3rem;
+          box-shadow: 0px 0px 8px $main-color;
+
+          &:hover
+          {
+            box-shadow: 0px 0px 18px #302e2e;
+          }
+        }
+
+        @include media-breakpoint-down(sm)
+        {
+          text-align: center;
+        }
+      }
+    }
+
+    .steps
+    {
+      z-index: 9999;
+      padding: 3rem;
+
+      &:after
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000000;
+        opacity: 0.2;
+        z-index: -1;
+      }
+
+      .step
+      {
+        .text
+        {
+          padding-bottom: 10px;
+        }
+
+        .step-desc
+        {
+          background-color: white;
+          color: black;
+          padding: 1rem;
+          font-size: 16px;
+          border-left: 4px solid #FFB574;
+          direction: ltr;
+          text-align: left;
+          word-wrap: break-word;
+          white-space: initial;
+        }
+
+        &:nth-child(2n+3)
+        {
+          .step-desc
+          {
+            border-left:4px solid $secondary-color !important;
+          }
+
+        }
+      }
+
+    }
+
+    @include media-breakpoint-down(md)
+    {
+      height: auto;
+      padding: 20px 0px;
+
+      .scope-ir
+      {
+        margin: 15px 0px;
+
+        .title
+        {
+          font-size: 20px;
+        }
+
+        .more-btn
+        {
+          padding: 7px 2rem;
+        }
+      }
+    }
+  }
+
+  .about-map
+  {
+    padding: 4rem 0px;
+
+    .title-map
+    {
+      padding: 20px 0px;
+      text-align: center;
+
+      .text
+      {
+        color: #BEBEBE;
+        padding: 20px 0px;
+        line-height: 26px;
+      }
+    }
+
+    .items
+    {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0px;
+
+      .item
+      {
+        @include flexCenter();
+        flex-direction: column;
+        padding: 15px 0px;
+
+        img
+        {
+          width: 100px;
+          height: auto;
+        }
+
+        .title
+        {
+          font-size: 18px;
+          padding-top: 2rem;
+
+          @include media-breakpoint-down(sm)
+          {
+            font-size: 14px;
+          }
+        }
+
+        .text
+        {
+          color: #BEBEBE;
+          padding: 10px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .contact
+  {
+    background: $main-color url("../img/background/pexels-photo-948887.png") no-repeat;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    @include media-breakpoint-down(sm)
+    {
+      background-size: cover;
+      background-position: right center;
+    }
+
+    .cover
+    {
+      width: 100%;
+      height: 100%;
+      background-color: rgba($main-color,0.7);
+      padding: 4rem 0px;
+
+      .text-desc
+      {
+        text-align: center;
+        color: white;
+        padding-bottom: 1rem;
+
+        .title
+        {
+          padding: 10px 0px;
+        }
+      }
+
+      .frm-send-msg
+      {
+        .send-msg
+        {
+          text-align: left;
+
+          @include  media-breakpoint-down(sm)
+          {
+            text-align: center;
+          }
+
+          .btn-send-msg
+          {
+            background-color: $secondary-color;
+            box-shadow: 0px 0px 8px $main-color;
+            color: white;
+            padding: 8px 30px;
+
+            &:hover
+            {
+              box-shadow: 0px 0px 15px $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer
+{
+  color: $main-color;
+  background: $main-color url("../img/background/Group 19.png") no-repeat;
+
+  .cover
+  {
+    background-color: rgba(#ffffff,0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0px;
+
+    img{padding-bottom: 10px;}
+
+    a
+    {
+      color: $main-color;
+      font: 15px $myFontFamily;
+      font-weight: bold;
+
+      &:hover
+      {
+        cursor: pointer;
+      }
+    }
+
+    .footer-menu
+    {
+      @include flexCenter();
+      padding: 2rem;
+
+      li
+      {
+        padding: 5px 30px;
+      }
+
+      @include media-breakpoint-down(sm)
+      {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .social-icon-menu
+    {
+      padding-top: 10px;
+      padding-right: 10px;
+
+      @include flexCenter();
+
+      i
+      {
+        font-size: 24px;
+        padding-left: 15px;
+        text-shadow: 0px 2px 2px $main-color;
+      }
+
+      .fi-instagram
+      {
+        color: $main-color;
+      }
+
+      .fi-twitter
+      {
+        color:#17a2b8 ;
+      }
+
+      .fi-facebook-official
+      {
+        color:#1021B8 ;
+      }
+    }
+  }
+}

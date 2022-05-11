@@ -1,0 +1,174 @@
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+$myFontSize: 13px;
+$myFontFamily: Yekan;
+
+//colors
+$borderColor: #D8D8D8;
+$myBlue: #3465cd;
+$myLightBlue:#F0F5F8;
+$myGrayDark: #959595;
+$myBtnColor:#1d1d1d;
+$myGreenColor:#64dd17;
+$main-color:#110C77;
+$secondary-color:#40C5FB;
+$background:#212121;
+
+
+//Material style
+$material-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+$material-shadow-hover: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+$material-transition: 0.35s;
+$material-border-radius: 0.15rem;
+
+//fonts
+@font-face {
+    font-family: Bmitra;
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/BMitra.woff") format("woff");
+}
+
+@font-face {
+    font-family: $myFontFamily;
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/iransans/woff2/IRANSansWeb(FaNum).woff2") format("woff2"),
+    url("../fonts/iransans/woff/IRANSansWeb(FaNum)_Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: $myFontFamily;
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Yekan/woff2/iranyekanweblight.woff2") format("woff2"), url("../fonts/Yekan/woff/iranyekanweblight.woff") format("woff");
+}
+
+@font-face {
+    font-family: $myFontFamily;
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Yekan/woff2/iranyekanwebregular.woff2") format("woff2"), url("../fonts/Yekan/woff/iranyekanwebregular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'YekanNumbers';
+    src: url("../fonts/Yekan/YekanNumbers-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+@mixin display-flex()
+{
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex()
+{
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+}
+
+@mixin flexCenter()
+{
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@mixin overlay()
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+@mixin positionCenter()
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+@mixin positionCenterWidth($x,$y)
+{
+    width: $x;
+    height: $y;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+html
+{
+    font-family: $myFontFamily,"YekanNumbers","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body
+{
+    font: $myFontSize $myFontFamily;
+    font-weight: normal;
+    position: relative;
+}
+
+a,
+a:hover,
+a:focus
+{
+    text-decoration: none;
+}
+
+ul
+{
+    list-style: none;
+}
+
+
+h1,h2,h3,h4,h5,h6
+{
+    margin: 0;
+    font-family:$myFontFamily,"YekanNumbers","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight:bold;
+}
+
+.number
+{
+    font-family: $myFontFamily,"YekanNumbers","Helvetica Neue",Helvetica,Arial,sans-serif;
+}

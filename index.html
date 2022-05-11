@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>WebMap</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-icon.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</head>
+<body>
+        <header class="site-header">
+            <nav class="navbar navbar-expand-md  navbar-light menu">
+                <div class="container">
+                    <!-- Brand -->
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/svg/logo-white.png" alt="" class="logo">
+
+                        <span class="mr-2">نقشه رایگان فارسی</span>
+                    </a>
+
+                    <!-- Toggler/collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">درباره</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">امکانات</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">دانلود</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">تماس با ما</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="site-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="row">
+                        <div class="scope-ir col-12 col-md-6">
+                            <span class="text">برای دامنه های IR</span>
+
+                            <h1 class="title">نقشه گوگل فارسی با امکانات فوق العاده و بدون تحریم</h1>
+
+                            <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+
+                            <div class="more-btn">
+                                <button class="btn btn-more">بیشتر بدانید</button>
+                            </div>
+                        </div>
+
+                        <div class="steps col-12 col-md-6">
+                            <div class="step">
+                                <p class="text">
+                                    <strong class="title">گام اول : </strong>
+                                    در کد های خود قطعه کد زیر را بیابید.
+                                </p>
+
+                                <p class="step-desc">
+                                    <span>&lt;script</span>
+                                    <span>src= </span>
+                                    <span> &quot;</span>
+                                    <span class="text">https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap</span>
+                                    <span> &quot;</span>
+                                    <span>&gt;</span>
+                                </p>
+                            </div>
+
+                            <div class="step">
+                                <p class="text">
+                                    <strong class="title">گام دوم : </strong>
+
+                                    سبس با کد زیر جایگزین کنید.
+                                </p>
+
+                                <p class="step-desc">
+                                    <span>&lt;script</span>
+                                    <span>src= </span>
+                                    <span> &quot;</span>
+                                    <span class="text">https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap</span>
+                                    <span> &quot;</span>
+                                    <span>&gt;</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <?php
+            for($i=1;$i<=2;$i++)
+                {
+            ?>
+                <section class="about-map">
+                    <div class="container">
+                        <div class="title-map">
+                            <h3>درباره نقشه بدون تحریم گوگل</h3>
+
+                            <p class="text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                                طراحان گرافیک است</p>
+                        </div>
+
+                        <div class="items">
+                            <div class="row">
+                                <div class="item col-12 col-sm-4">
+                                    <img src="assets/img/svg/Group%209.svg" alt="">
+
+                                    <strong class="title">همان جزئیات دقیق گوگل</strong>
+
+                                    <p class="text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                                        صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                                </div>
+
+                                <div class="item col-12 col-sm-4">
+                                    <img src="assets/img/svg/Group%208.svg" alt="">
+
+                                    <strong class="title">همان جزئیات دقیق گوگل</strong>
+
+                                    <p class="text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                                        صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                                </div>
+
+                                <div class="item col-12 col-sm-4">
+                                    <img src="assets/img/svg/Group%207.svg" alt="">
+
+                                    <strong class="title">همان جزئیات دقیق گوگل</strong>
+
+                                    <p class="text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                                        صنعت چاپ و با استفاده از طراحان گرافیک است</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+           <?php
+                }
+            ?>
+
+            <section class="contact">
+                <div class="cover">
+                    <div class="container">
+                        <div class="text-desc">
+                            <h3 class="title">تماس با ما</h3>
+
+                            <p class="text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.</p>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-10 col-lg-8">
+                                <form class="frm-send-msg">
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6">
+                                            <input type="text" class="form-control" id="inputName4" placeholder="نام و نام خانوادگی">
+                                        </div>
+
+                                        <div class="form-group col-12 col-md-6">
+                                            <input type="text" class="form-control" id="inputEmail4" placeholder="ایمیل">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <textarea type="text" class="form-control" rows="5" id="inputAdress" placeholder="پیام شما ..."></textarea>
+                                    </div>
+
+                                    <div class="form-group send-msg">
+                                       <button type="submit" class="btn btn-send-msg">ارسال پیام</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <footer>
+            <div class="cover">
+                <img src="assets/img/svg/logo-blue.svg" alt="" class="logo">
+
+                <h6 class="title">نقشه رایگان فارسی</h6>
+
+                <ul class="footer-menu">
+                    <li><a href="#">درباره ما</a> </li>
+
+                    <li><a href="#">امکانات</a> </li>
+
+                    <li><a href="#"> دانلود</a> </li>
+
+                    <li><a href="#">تماس با ما</a> </li>
+                </ul>
+
+                <ul class="social-icon-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fi-instagram"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fi-twitter"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fi-facebook-official"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>

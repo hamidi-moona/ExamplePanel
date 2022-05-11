@@ -1,0 +1,68 @@
+@font-face {
+  font-family: Bmitra;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/BMitra.woff") format("woff"); }
+
+@font-face {
+  font-family: Yekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/iransans/woff2/IRANSansWeb(FaNum).woff2") format("woff2"), url("../fonts/iransans/woff/IRANSansWeb(FaNum)_Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: Yekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Yekan/woff2/iranyekanweblight.woff2") format("woff2"), url("../fonts/Yekan/woff/iranyekanweblight.woff") format("woff"); }
+
+@font-face {
+  font-family: Yekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Yekan/woff2/iranyekanwebregular.woff2") format("woff2"), url("../fonts/Yekan/woff/iranyekanwebregular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'YekanNumbers';
+  src: url("../fonts/Yekan/YekanNumbers-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility; }
+
+html {
+  font-family: Yekan, "YekanNumbers", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+body {
+  font: 13px Yekan;
+  font-weight: normal;
+  position: relative; }
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+p {
+  margin-bottom: 0; }
+
+figure {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: Yekan, "YekanNumbers", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold; }
+
+.number {
+  font-family: Yekan, "YekanNumbers", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.mybtn {
+  background-color: #3465cd;
+  border-color: #3465cd;
+  color: #fff;
+  font-size: .8rem; }
